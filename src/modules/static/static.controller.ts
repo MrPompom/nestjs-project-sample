@@ -5,8 +5,9 @@ import { StaticService } from './static.service';
 export class StaticController {
   constructor(private readonly staticService: StaticService) {}
 
-  @Get('add')
-  addNumbers(@Query('a') a: number, @Query('b') b: number): number {
-    return this.staticService.addNumbers(a, b);
+  @Get('presentation')
+  presentation(): string {
+    return this.staticService.presentation();
   }
+
 }
